@@ -43,8 +43,7 @@ img{
 
 .price-list h2{
     color:#ff9800;
-    margin-top:0;
-    margin-bottom:15px;
+    margin:0 0 15px;
 }
 
 .price-list p{
@@ -55,11 +54,12 @@ img{
 
 .order-btn{
     display:inline-block;
-    margin:20px 0 40px;
-    padding:15px 35px;
+    width:85%;
+    max-width:350px;
+    margin:10px auto;
+    padding:15px;
     background:#ff9800;
     color:#fff;
-    text-decoration:none;
     font-size:20px;
     font-weight:bold;
     border:none;
@@ -72,9 +72,24 @@ img{
     background:#e68900;
     transform:scale(1.05);
 }
+
+.backup-btn{
+    background:#444;
+}
+
+.backup-btn:hover{
+    background:#666;
+}
+
+.footer{
+    margin:30px 0;
+    color:#aaa;
+    font-size:14px;
+}
 </style>
 
 </head>
+
 <body>
 
 <h1>Date Date Kyaell</h1>
@@ -108,9 +123,20 @@ img{
 </div>
 
 <button class="order-btn"
-onclick="window.open('https://www.tiktok.com/@hsu.hsu.sein?_r=1&_t=ZS-973fvg1Bfft','_blank')">
-Order Now
+onclick="window.location.href='tel:09679570939'">
+📞 Order Now
 </button>
+
+<br>
+
+<button class="order-btn backup-btn"
+onclick="window.location.href='tel:09673481563'">
+📞 Call Backup Number
+</button>
+
+<div class="footer">
+    © 2026 Date Date Kyaell
+</div>
 
 </body>
 </html>
