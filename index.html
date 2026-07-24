@@ -7,6 +7,28 @@
 <title>ဒိတ်ဒိတ်ကြဲ</title>
 
 <style>
+    #welcome{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+#welcome button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:18px 35px;
+    font-size:22px;
+    border-radius:50px;
+    cursor:pointer;
+}
 body{
     margin:0;
     background:#111;
@@ -130,6 +152,15 @@ img{
 </head>
 
 <body>
+    
+
+<div id="welcome">
+    <button onclick="startSite()">🍽️ Enter Date Date Kyaell</button>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <h1><b>ဒိတ်ဒိတ်ကြဲ မာလာရှမ်းကော , Hotpot & BBQ </b></h1>
 
@@ -201,19 +232,15 @@ onclick="window.location.href='tel:09673481563'">
     </div>
 
 </div>
-<audio id="bgMusic" autoplay loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
-    <script>
-window.addEventListener("load", function () {
-    const music = document.getElementById("bgMusic");
 
-    music.play().catch(() => {
-        document.body.addEventListener("click", function () {
-            music.play();
-        }, { once: true });
-    });
-});
-    </script>
+    <script>
+function startSite() {
+    document.getElementById("bgMusic").play();
+    document.getElementById("welcome").style.display = "none";
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
